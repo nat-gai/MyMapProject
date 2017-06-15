@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.nat.mymapproject.WriteInfoActivity"
+    tools:showIn="@layout/activity_write_info">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/descText"
+        android:layout_below="@+id/descText"
+        android:layout_marginTop="20dp"
+        android:text="Place address"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textViewAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/descTitle"
+        android:layout_marginTop="33dp"
+        android:text="Place nane"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textViewAccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Access to information"
+        android:textSize="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/address"
+        android:layout_alignStart="@+id/address" />
+
+    <TextView
+        android:id="@+id/textViewDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="Place description"
+        android:textSize="15dp"
+        android:layout_below="@+id/descTitle"
+        android:layout_alignStart="@+id/descText" />
+
+    <EditText
+        android:id="@+id/descTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="Title"
+        android:inputType="text"
+        android:singleLine="false"
+        android:textColorLink="@android:color/holo_blue_light"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewName"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:textColorLink="@android:color/holo_blue_light" />
+
+    <EditText
+        android:id="@+id/descText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="@string/descText"
+        android:inputType="textMultiLine"
+        android:textColorLink="@android:color/holo_blue_light"
+        android:layout_below="@+id/textViewDesc"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:id="@+id/groupAccess"
+        android:layout_width="127dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/textViewAccess"
+        android:layout_alignStart="@+id/textViewAccess">
+
+        <RadioButton
+            android:id="@+id/rbtnPrivate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="private"
+            android:textColorLink="@android:color/holo_blue_light" />
+
+        <RadioButton
+            android:id="@+id/rbtnPublic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="public"
+            android:textColorLink="@android:color/holo_blue_light" />
+    </RadioGroup>
+
+</RelativeLayout>
